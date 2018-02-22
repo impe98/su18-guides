@@ -90,28 +90,28 @@
 \colouredbox{magenta}{
 \subsection{Working with remotes}
 \begin{tabularx}{\hsize}{lX}
-\cmd{clone <url>} & \textit{What does this do? } \\
-\cmd{pull} & \textit{What does this do? }  \\
+\cmd{clone <url>} & \textit{Clones a repository to a directory, allowing for branches to be created } \\
+\cmd{pull} & \textit{"pulls" data from remote repositories to the local repository}  \\
 \end{tabularx}
 
 \subsection{Create a local repository}
 \begin{tabularx}{\hsize}{lX}
-\cmd{init} & \textit{What does this do? } \\
-\cmd{add .} & \textit{What does this do? } \\
-\cmd{commit} & \textit{What does this do? )} \\
+\cmd{init} & \textit{Creates an empty repository allowing for new branches within it} \\
+\cmd{add .} & \textit{Cements the data for which to be commited} \\
+\cmd{commit} & \textit{Commits the data cemmented by the "add ." command to the remote repository)} \\
 \end{tabularx}
 
 \subsection{Files}
 \begin{tabularx}{\hsize}{lX}
-\cmd{add <file>} & \textit{What does this do? } \\
-\cmd{rm <file>} & \textit{What does this do? } \\
-\cmd{mv <file>} & \textit{What does this do? } \\
+\cmd{add <file>} & \textit{Adds a file to the remote repository} \\
+\cmd{rm <file>} & \textit{Removes a file from the remote repository} \\
+\cmd{mv <file>} & \textit{Moves or renames a file in the remote repository} \\
 \end{tabularx}
 
 \subsection{Committing}
 \begin{tabularx}{\hsize}{lX}
-\cmd{commit -S} & \textit{What does this do?} \\
-\cmd{commit -S -{}-amend} & \textit{What does this do?} \\
+\cmd{commit -S} & \textit{Adds a "signoff" which assures that the one commiting is agreeing to certain licenses} \\
+\cmd{commit -S -{}-amend} & \textit{Ammends to the latest commit instead of creating an entirely new commit} \\
 \end{tabularx}
 }
 
@@ -120,19 +120,19 @@
 %\subsection{Configuration}
 %\begin{tabularx}{\hsize}{lX}
 %\cmd{config --{}--global user.name \textbackslash}\\
-%\cmd{  "John Doe"} \textit{What does this do? } \\
+%\cmd{  "John Doe"} \textit{Sets up username} \\
 %Email:  & \cmd{config --{}--global user.email \textbackslash}\\
-%        & \cmd{  "email@example.com"} \textit{What does this do? }
+%        & \cmd{  "email@example.com"} \textit{Sets up email}
 %\end{tabularx}
 %}
 
 \colouredbox{green}{
 \subsection{Browsing}
 \begin{tabularx}{\hsize}{lX}
-\cmd{status} & \textit{What does this do? } \\
-\cmd{log} & \textit{What does this do? } \\
-\cmd{blame <file>} & \textit{What does this do? } \\
-\cmd{diff} & \textit{What does this do? }
+\cmd{status} & \textit{Shows status of tree currently being worked on} \\
+\cmd{log} & \textit{Shows log-history of earlier commits} \\
+\cmd{blame <file>} & \textit{Shows the author who has last edited or implemented further in the given file} \\
+\cmd{diff} & \textit{Shows the differences between the last commit and the remote repository}
 \end{tabularx}
 }
 \newpage
@@ -141,11 +141,11 @@
 \colouredbox{yellow}{
 \section{Branching and Merging}
 \begin{tabularx}{\hsize}{lXr}
-List:     & \cmd{branch} & \textit{What does this do? } \\
-Create:   & \cmd{checkout -b new-branch} & \textit{What does this do? } \\
-Delete:   & \cmd{branch -d new-branch} & \textit{What does this do? } \\
-Checkout: & \cmd{checkout testing} & \textit{What does this do? } \\
-Merge:    & \cmd{merge testing} & \textit{What does this do? }
+List:     & \cmd{branch} & \textit{Shows the branch currently being worked on} \\
+Create:   & \cmd{checkout -b new-branch} & \textit{Exits the current branch being worked on and switches to a new one} \\
+Delete:   & \cmd{branch -d new-branch} & \textit{Deletes the given branch} \\
+Checkout: & \cmd{checkout testing} & \textit{Switches to a branch called "testing"} \\
+Merge:    & \cmd{merge testing} & \textit{Merges the branch "testing" with the remote repository}
 \end{tabularx}
 }
 
@@ -156,15 +156,15 @@ Merge:    & \cmd{merge testing} & \textit{What does this do? }
 \colouredbox{blue2}{
 \section{Remotes}
 \begin{tabularx}{\hsize}{lXr}
-Clone: &     \cmd{clone <url>} & \textit{What does this do? }  \\
-List: &     \cmd{remote -v} & \textit{What does this do? }  \\
-Send: &     \cmd{push } & \textit{What does this do? }  \\
-      &     \cmd{push origin master} & \textit{What does this do? }  \\
-Receive: &     \cmd{pull } & \textit{What does this do? }  \\
-      &     \cmd{pull origin master} & \textit{What does this do? }  \\
-Add:  &     \cmd{remote add <name> <url>} & \textit{What does this do? }  \\
-Fetch:&     \cmd{fetch name} & \textit{What does this do? }  \\
-Checkout:&  \cmd{checkout <name/master>} & \textit{What does this do? }  \\
+Clone: &     \cmd{clone <url>} & \textit{Clones remote repository to the local directory}  \\
+List: &     \cmd{remote -v} & \textit{Shows the remote repository and its URL}  \\
+Send: &     \cmd{push } & \textit{Pushes changes in local directory to the branch specified}  \\
+      &     \cmd{push origin master} & \textit{"Pushes" changes on local directory to the remote repository}  \\
+Receive: &     \cmd{pull } & \textit{"Pulls" from the given branch to local directory}  \\
+      &     \cmd{pull origin master} & \textit{"Pulls" from remote repository to local directory}  \\
+Add:  &     \cmd{remote add <name> <url>} & \textit{Creates new remote repository}  \\
+Fetch:&     \cmd{fetch name} & \textit{Downloads changes from given repository}  \\
+Checkout:&  \cmd{checkout <name/master>} & \textit{Switches to another given repository}  \\
 \end{tabularx}
 }
 
